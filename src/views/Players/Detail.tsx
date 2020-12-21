@@ -19,6 +19,7 @@ export const PlayerDetail = () => {
             <h2>status: {player.alive ? 'alive' : 'dead'}</h2>
             {player.alive && (
                 <h2>
+                    {/* eslint-disable-next-line */}
                     <a style={{ cursor: 'pointer' }} onClick={() => {
                         update((draft) => {
                             const index = draft.players.findIndex((p => p.name === player.name));
@@ -39,6 +40,7 @@ export const PlayerDetail = () => {
 
             {
                 player.party === 'defender' && (<h2>
+                    {/* eslint-disable-next-line */}
                     <a style={{ cursor: 'pointer' }}
                         onClick={() => {
                             update((draft) => {
