@@ -18,9 +18,7 @@ import { PlayerDetail } from './views/Players/Detail';
 
 import { Provider } from './provider';
 
-
-
-export default () => {
+function App() {
   const { data } = useData();
 
   if (data.won) {
@@ -75,3 +73,4 @@ export default () => {
   );
 }
 
+export default App;

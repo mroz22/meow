@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { PARTIES, Player } from '../provider';
+import { Player } from '../provider';
 
 export const Icon = ({ icon }: { icon: Player['party'] }) => {
     switch (icon) {

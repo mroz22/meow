@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { Context } from './context';
 
 type ValueOf<T> = T[keyof T];
@@ -119,10 +119,10 @@ export const Provider: React.FunctionComponent = (props) => {
     const [data, setData] = useState(initialState);
     const [timer, setTimer] = useState<NodeJS.Timeout>();
 
-    const update = (manipulator: Manipulator<typeof initialState>) => {
+    const update = useCallback((manipulator: Manipulator<typeof initialState>) => {
         const updated = manipulator({ ...data });
         setData({ ...updated });
-    }
+    }, [data])
 
     useEffect(() => {
         if (!timer) {
@@ -174,13 +174,12 @@ export const Provider: React.FunctionComponent = (props) => {
             }
         });
 
-    }, [data.points, data.difficulty, data.timestamp, data.timeLimit, data.players, timer])
+    }, [data.points, data.difficulty, data.timestamp, data.timeLimit, data.players, timer, update, data])
 
     return (
         <Context.Provider value={{
             data,
             update,
-
         }}>
             {props.children}
         </Context.Provider>
