@@ -15,6 +15,7 @@ import { Map } from './views/Map';
 import { Control } from './views/Control';
 import { Players } from './views/Players';
 import { PlayerDetail } from './views/Players/Detail';
+import { CommandCenter } from './views/CommandCenter';
 
 import { Provider } from './provider';
 
@@ -60,11 +61,13 @@ function App() {
             <Route path="/players">
               <Players />
             </Route>
+            <Route path="/command-center">
+              <CommandCenter />
+            </Route>
             <Route path="/">
               <Control />
             </Route>
           </Switch>
-          {/* </header> */}
         </div>
       </Router>
 

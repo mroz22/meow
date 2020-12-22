@@ -50,7 +50,7 @@ export const initialState = {
     players: [{
         name: 'Granatovy Joe',
         alive: true,
-        party: PARTIES.MUTANT,
+        party: PARTIES.DEFENDER,
         respawnAt: 0,
     }, {
         name: 'Ferenc Ledwinka',
@@ -65,7 +65,7 @@ export const initialState = {
     }, {
         name: 'Boris Pecinka',
         alive: false,
-        party: PARTIES.MUTANT,
+        party: PARTIES.DEFENDER,
         respawnAt: 0,
     }],
     facilities: [{

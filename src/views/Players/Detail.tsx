@@ -32,8 +32,8 @@ export const PlayerDetail = () => {
                             `${player.name} died.`
                         );
                         speechSynthesis.speak(utterance);
-
-                        history.push('/players')
+                        history.goBack();
+                        // history.push('/players')
                     }}>I died</a>
                 </h2>
             )}
@@ -52,7 +52,7 @@ export const PlayerDetail = () => {
                                 `${player.name} turned into brainless mutant.`
                             );
                             speechSynthesis.speak(utterance);
-                            history.push('/players')
+                            history.goBack();
                         }}
                     >I became mutant</a>
                 </h2>)

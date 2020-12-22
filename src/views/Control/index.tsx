@@ -12,6 +12,10 @@ export const Control = () => {
                 <Link to="/map">Map</Link>
             </h1>
 
+            <h1>
+                <Link to="/command-center">Command center (defenders)</Link>
+            </h1>
+
         </div>
     )
 }
